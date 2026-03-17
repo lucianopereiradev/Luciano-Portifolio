@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPlace - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+     <link rel="icon" type="image/png" href="logo_us.png">
+</head>
+
+<body>
+    <div class="container">
+
+        <img src="logo_us.png" class="logo" alt="XPLACE">
+
+        <div class="card">
+            <h1>Logar</h1>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha">
+
+            <button class="btn" onclick="fazerLogin()">Continuar</button>
+
+            <div id="notif" class="notif hidden">Conta não encontrada.</div>
+
+            <div class="links">
+                <a href="#">Esqueci a senha</a>
+                <a href="cadastro.html">Não possuo cadastro</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

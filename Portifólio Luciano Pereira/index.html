@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Luciano Pereira – projetos web e habilidades em desenvolvimento.">
+    <link rel="icon" href="favicon.ico">
+    <title>Luciano Pereira - Desenvolvedor</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="linguagem">
+        <img class="br-en" id="flagImg" src="brasil.png" alt="Trocar idioma" role="button" tabindex="0">
+    </div>
+
+
+    <div id="languageModal" class="language-modal">
+        <div class="language-content">
+            <h2>Choose Language / Escolha o Idioma</h2>
+            <div class="language-options">
+                <button class="lang-btn" data-lang="pt">🇧🇷 Português</button>
+                <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="language-modal">
+        <div class="language-content contact-modal-content">
+            <h2 data-pt="Contato" data-en="Contact">Contato</h2>
+            <p class="contact-label" data-pt="Entre em contato comigo:" data-en="Get in touch with me:">Entre em contato comigo:</p>
+            <a href="mailto:lucianopereiradejesus14@gmail.com" class="contact-email">lucianopereiradejesus14@gmail.com</a>
+            <button class="lang-btn contact-close-btn" data-action="close-contact" data-pt="Fechar" data-en="Close">Fechar</button>
+        </div>
+    </div>
+
+    <div id="redesModal" class="language-modal">
+        <div class="language-content redes-modal-content">
+            <h2 data-pt="Minhas Redes" data-en="My Networks">Minhas Redes</h2>
+            <p class="contact-label" data-pt="Vamos nos conectar!" data-en="Let's connect!">Vamos nos conectar!</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/Luciano-P-Jesus" target="_blank" class="social-link github">
+                    <span class="social-icon">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </span>
+                    <span class="social-name">GitHub</span>
+                    <span class="social-arrow">→</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/luciano-pereira-de-jesus-b1060439a" target="_blank" class="social-link linkedin">
+                    <span class="social-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </span>
+                    <span class="social-name">LinkedIn</span>
+                    <span class="social-arrow">→</span>
+                </a>
+            </div>
+            
+            <button class="lang-btn contact-close-btn" data-action="close-redes" data-pt="Fechar" data-en="Close">Fechar</button>
+        </div>
+    </div>
+
+    <main class="principal">
+
+        <div class="container">
+
+            <div class="img" alt="Luciano Pereira de Jesus">
+
+                <img class="L-img" src="eu.jpg">
+
+            </div>
+
+            <div class="textos">
+                <h1 class="titulo" data-pt="Luciano Pereira de Jesus" data-en="Luciano Pereira de Jesus">Luciano Pereira
+                    de Jesus</h1>
+                <p class="subtitulo" data-pt="Estudante de Desenvolvimento | 16 anos | Taboão da Serra - SP"
+                    data-en="Programming Student | 16 years old | Taboão da Serra - SP">Estudante de desenvolvimento| 16
+                    anos | Taboão da Serra - SP</p>
+                <h2 class="apresentação"
+                    data-pt="Busco uma oportunidade na área de programação como jovem aprendiz ou estagiário, com o objetivo de iniciar minha trajetória profissional em tecnologia. Atualmente curso o Ensino Médio integrado ao Técnico em Desenvolvimento de Sistemas na ETEC de Embu das Artes, onde venho adquirindo conhecimentos fundamentais em programação e lógica de sistemas. Sou uma pessoa ambiciosa, dedicada e com grande interesse em aprender e evoluir na área de desenvolvimento, buscando desde já aplicar na prática os conhecimentos adquiridos em sala de aula e crescer profissionalmente no setor de tecnologia."
+                    data-en="I am looking for an opportunity in programming as a young apprentice or intern, with the goal of starting my professional journey in technology. I am currently studying high school integrated with a technician course in Systems Development at ETEC de Embu das Artes, where I am acquiring fundamental knowledge in programming and systems logic. I am an ambitious, dedicated person with great interest in learning and evolving in the development field, already seeking to apply the knowledge acquired in class practice and grow professionally in the technology sector.">
+                    Busco uma oportunidade na área de programação como jovem aprendiz ou
+                    estagiário, com o objetivo de
+                    iniciar minha trajetória profissional em tecnologia. Atualmente curso o Ensino Médio integrado ao
+                    Técnico em Desenvolvimento de Sistemas na ETEC de Embu das Artes, onde venho adquirindo
+                    conhecimentos fundamentais em programação e lógica de sistemas. Sou uma pessoa ambiciosa, dedicada e
+                    com grande interesse em aprender e evoluir na área de desenvolvimento, buscando desde já aplicar na
+                    prática os conhecimentos adquiridos em sala de aula e crescer profissionalmente no setor de
+                    tecnologia.</h2>
+            </div>
+        </div>
+
+
+        <div class="linha"></div>
+        <nav class="links">
+
+
+            <div class="linha-titulos">
+                <h1 class="l-titulos" data-pt="Projetos" data-en="Projects">Projetos</h1>
+                <h1 class="l-contato" data-pt="Contato" data-en="Contact">Contato</h1>
+                <h1 class="l-titulos" data-pt="Redes" data-en="Networks">Redes</h1>
+            </div>
+
+            <div class="linha-links">
+                <a href="projetos.html" class="projetos" data-pt="Clique aqui, e veja alguns dos projetos que já desenvolvi!"
+                    data-en="Click here to see some of the projects I've developed!">Clique aqui, e veja alguns dos
+                    projetos que já desenvolvi!</a>
+
+                <div class="contato" data-pt="Segue minhas informações para contato!"
+                    data-en="Follow my contact information!">Segue minhas informações para contato!</div>
+
+                <div class="redes" data-pt="Linkedin, Github, Etc..." data-en="Linkedin, Github, Etc...">Linkedin,
+                    Github, Etc...</div>
+            </div>
+
+        </nav>
+
+        <footer>
+
+
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js?v=4"></script>
+
+
+</body>
+
+</html>
