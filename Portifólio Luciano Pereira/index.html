@@ -1,148 +1,347 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-BR" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Luciano Pereira – projetos web e habilidades em desenvolvimento.">
-    <link rel="icon" href="favicon.ico">
-    <title>Luciano Pereira - Desenvolvedor</title>
-    <link rel="stylesheet" href="style.css?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Luciano Pereira – desenvolvedor web, estudante ETEC.">
+  <link rel="icon" href="favicon.ico">
+  <title>Luciano Pereira — Desenvolvedor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="linguagem">
-        <img class="br-en" id="flagImg" src="brasil.png" alt="Trocar idioma" role="button" tabindex="0">
+  <!-- ── SCROLL BAR ── -->
+  <div class="scroll-bar"><div class="scroll-bar-fill" id="scrollFill"></div></div>
+
+  <!-- ── TOP CONTROLS ── -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="topbar">
+    <button class="theme-btn" id="themeBtn" title="Tema">🎨</button>
+    <button class="lang-btn-top" id="langBtn" title="Idioma">
+      <img src="brasil.png" id="flagImg" alt="Idioma">
+    </button>
+  </div>
+
+  <!-- ── SIDE NAV ── -->
+  <nav class="sidenav" id="sidenav">
+    <div class="sidenav-logo">
+      Luciano Pereira
+      <span>Portfólio</span>
     </div>
-
-
-    <div id="languageModal" class="language-modal">
-        <div class="language-content">
-            <h2>Choose Language / Escolha o Idioma</h2>
-            <div class="language-options">
-                <button class="lang-btn" data-lang="pt">🇧🇷 Português</button>
-                <button class="lang-btn" data-lang="en">🇺🇸 English</button>
-            </div>
-        </div>
+    <ul class="nav-list">
+      <li><a href="#sobre"       class="active"><span class="nav-dot"></span><span data-pt="Sobre" data-en="About">Sobre</span></a></li>
+      <li><a href="#projetos"><span class="nav-dot"></span><span data-pt="Projetos" data-en="Projects">Projetos</span></a></li>
+      <li><a href="#mini"><span class="nav-dot"></span><span data-pt="Mini Projetos" data-en="Mini Projects">Mini Projetos</span></a></li>
+      <li><a href="#contato"><span class="nav-dot"></span><span data-pt="Contato" data-en="Contact">Contato</span></a></li>
+    </ul>
+    <div class="sidenav-footer">
+      <a href="https://github.com/lucianopereiradev" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/luciano-pereira-de-jesus-b1060439a" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="remindmail.onrender.com" target="_blank" rel="noopener">RemindMail ↗</a>
     </div>
+  </nav>
 
-    <div id="contactModal" class="language-modal">
-        <div class="language-content contact-modal-content">
-            <h2 data-pt="Contato" data-en="Contact">Contato</h2>
-            <p class="contact-label" data-pt="Entre em contato comigo:" data-en="Get in touch with me:">Entre em contato comigo:</p>
-            <a href="mailto:lucianopereiradejesus14@gmail.com" class="contact-email">lucianopereiradejesus14@gmail.com</a>
-            <button class="lang-btn contact-close-btn" data-action="close-contact" data-pt="Fechar" data-en="Close">Fechar</button>
-        </div>
+  <!-- ── OVERLAY (mobile) ── -->
+  <div id="navOverlay"></div>
+
+  <!-- ── LANGUAGE MODAL ── -->
+  <div class="lang-modal" id="langModal">
+    <div class="lang-box">
+      <h2>Choose Language / Escolha o Idioma</h2>
+      <div class="lang-opts">
+        <button class="lang-opt" data-lang="pt">🇧🇷 Português</button>
+        <button class="lang-opt" data-lang="en">🇺🇸 English</button>
+      </div>
     </div>
+  </div>
 
-    <div id="redesModal" class="language-modal">
-        <div class="language-content redes-modal-content">
-            <h2 data-pt="Minhas Redes" data-en="My Networks">Minhas Redes</h2>
-            <p class="contact-label" data-pt="Vamos nos conectar!" data-en="Let's connect!">Vamos nos conectar!</p>
-            
-            <div class="social-links">
-                <a href="https://github.com/Luciano-P-Jesus" target="_blank" class="social-link github">
-                    <span class="social-icon">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                        </svg>
-                    </span>
-                    <span class="social-name">GitHub</span>
-                    <span class="social-arrow">→</span>
-                </a>
-                
-                <a href="https://www.linkedin.com/in/luciano-pereira-de-jesus-b1060439a" target="_blank" class="social-link linkedin">
-                    <span class="social-icon">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </span>
-                    <span class="social-name">LinkedIn</span>
-                    <span class="social-arrow">→</span>
-                </a>
-            </div>
-            
-            <button class="lang-btn contact-close-btn" data-action="close-redes" data-pt="Fechar" data-en="Close">Fechar</button>
-        </div>
+  <div class="theme-modal" id="themeModal">
+    <div class="theme-box">
+      <h2>Escolha um tema</h2>
+      <div class="theme-opts">
+        <button class="theme-dot active" data-t="dark" title="Dark"></button>
+        <button class="theme-dot" data-t="light" title="Light"></button>
+        <button class="theme-dot" data-t="ocean" title="Ocean"></button>
+        <button class="theme-dot" data-t="forest" title="Forest"></button>
+        <button class="theme-dot" data-t="rose" title="Rose"></button>
+        <button class="theme-dot" data-t="amber" title="Amber"></button>
+      </div>
     </div>
+  </div>
 
-    <main class="principal">
+  <!-- ── MAIN ── -->
+  <div class="main">
 
-        <div class="container">
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="hero-inner fade-up">
+        <div class="hero-photo">
+          <img src="eu.jpg" alt="Luciano Pereira">
+        </div>
+        <div class="hero-text">
+          <div class="hero-tag" data-pt="Desenvolvedor em formação" data-en="Developer in training">Desenvolvedor em formação</div>
+          <h1 class="hero-name" data-pt="Luciano Pereira de Jesus" data-en="Luciano Pereira de Jesus">Luciano Pereira de Jesus</h1>
+          <p class="hero-role" data-pt="Estudante de Desenvolvimento | 16 anos | Taboão da Serra — SP" data-en="Programming Student | 16 years old | Taboão da Serra — SP">Estudante de Desenvolvimento | 16 anos | Taboão da Serra — SP</p>
+          <p class="hero-bio"
+             data-pt="Busco uma oportunidade na área de programação como jovem aprendiz ou estagiário, com o objetivo de iniciar minha trajetória profissional em tecnologia. Curso o Ensino Médio integrado ao Técnico em Desenvolvimento de Sistemas na ETEC de Embu das Artes, onde venho adquirindo conhecimentos fundamentais em programação e lógica de sistemas. Sou ambicioso, dedicado e com grande interesse em aprender e evoluir na área de desenvolvimento."
+             data-en="I am looking for an opportunity in programming as a young apprentice or intern, with the goal of starting my professional journey in technology. I study high school integrated with a Systems Development technician course at ETEC de Embu das Artes, acquiring fundamental knowledge in programming and systems logic. I am ambitious, dedicated and eager to learn and grow.">
+            Busco uma oportunidade na área de programação como jovem aprendiz ou estagiário, com o objetivo de iniciar minha trajetória profissional em tecnologia. Curso o Ensino Médio integrado ao Técnico em Desenvolvimento de Sistemas na ETEC de Embu das Artes, onde venho adquirindo conhecimentos fundamentais em programação e lógica de sistemas. Sou ambicioso, dedicado e com grande interesse em aprender e evoluir na área de desenvolvimento.
+          </p>
+          <div class="hero-ctas">
+            <a href="#projetos" class="btn-primary" data-pt="Ver Projetos" data-en="See Projects">Ver Projetos</a>
+            <a href="#contato"  class="btn-outline"  data-pt="Entrar em Contato" data-en="Get in Touch">Entrar em Contato</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="img" alt="Luciano Pereira de Jesus">
+    <!-- PROJETOS -->
+    <section id="projetos">
+      <div class="sec-header fade-up">
+        <div class="sec-label" data-pt="Trabalhos" data-en="Work">Trabalhos</div>
+        <h2 class="sec-title" data-pt="Projetos Principais" data-en="Main Projects">Projetos Principais</h2>
+        <p class="sec-sub" data-pt="Aplicações completas que desenvolvi" data-en="Full applications I developed">Aplicações completas que desenvolvi</p>
+      </div>
 
-                <img class="L-img" src="eu.jpg">
+      <div class="proj-grid stagger">
 
-            </div>
-
-            <div class="textos">
-                <h1 class="titulo" data-pt="Luciano Pereira de Jesus" data-en="Luciano Pereira de Jesus">Luciano Pereira
-                    de Jesus</h1>
-                <p class="subtitulo" data-pt="Estudante de Desenvolvimento | 16 anos | Taboão da Serra - SP"
-                    data-en="Programming Student | 16 years old | Taboão da Serra - SP">Estudante de desenvolvimento| 16
-                    anos | Taboão da Serra - SP</p>
-                <h2 class="apresentação"
-                    data-pt="Busco uma oportunidade na área de programação como jovem aprendiz ou estagiário, com o objetivo de iniciar minha trajetória profissional em tecnologia. Atualmente curso o Ensino Médio integrado ao Técnico em Desenvolvimento de Sistemas na ETEC de Embu das Artes, onde venho adquirindo conhecimentos fundamentais em programação e lógica de sistemas. Sou uma pessoa ambiciosa, dedicada e com grande interesse em aprender e evoluir na área de desenvolvimento, buscando desde já aplicar na prática os conhecimentos adquiridos em sala de aula e crescer profissionalmente no setor de tecnologia."
-                    data-en="I am looking for an opportunity in programming as a young apprentice or intern, with the goal of starting my professional journey in technology. I am currently studying high school integrated with a technician course in Systems Development at ETEC de Embu das Artes, where I am acquiring fundamental knowledge in programming and systems logic. I am an ambitious, dedicated person with great interest in learning and evolving in the development field, already seeking to apply the knowledge acquired in class practice and grow professionally in the technology sector.">
-                    Busco uma oportunidade na área de programação como jovem aprendiz ou
-                    estagiário, com o objetivo de
-                    iniciar minha trajetória profissional em tecnologia. Atualmente curso o Ensino Médio integrado ao
-                    Técnico em Desenvolvimento de Sistemas na ETEC de Embu das Artes, onde venho adquirindo
-                    conhecimentos fundamentais em programação e lógica de sistemas. Sou uma pessoa ambiciosa, dedicada e
-                    com grande interesse em aprender e evoluir na área de desenvolvimento, buscando desde já aplicar na
-                    prática os conhecimentos adquiridos em sala de aula e crescer profissionalmente no setor de
-                    tecnologia.</h2>
-            </div>
+        <!-- XPlace -->
+        <div class="proj-card">
+          <div class="proj-name" data-pt="XPlace Core — Studium" data-en="XPlace Core — Studium">XPlace Core — Studium</div>
+          <p class="proj-desc"
+             data-pt="Plataforma web completa com sistema de autenticação, dashboard interativo, loja de produtos e carrossel de imagens. Desenvolvida com HTML, CSS e JavaScript puro."
+             data-en="Complete web platform with authentication, interactive dashboard, product store and image carousel. Built with pure HTML, CSS and JavaScript.">
+            Plataforma web completa com sistema de autenticação, dashboard interativo, loja de produtos e carrossel de imagens. Desenvolvida com HTML, CSS e JavaScript puro.
+          </p>
+          <div class="pills">
+            <span class="pill">HTML5</span>
+            <span class="pill">CSS3</span>
+            <span class="pill">JavaScript</span>
+          </div>
+          <div class="proj-feats">
+            <p data-pt="Recursos" data-en="Features">Recursos</p>
+            <ul>
+              <li data-pt="✓ Sistema de Login e Cadastro" data-en="✓ Login and Registration System">✓ Sistema de Login e Cadastro</li>
+              <li data-pt="✓ Dashboard Personalizável" data-en="✓ Customizable Dashboard">✓ Dashboard Personalizável</li>
+              <li data-pt="✓ Loja Online" data-en="✓ Online Store">✓ Loja Online</li>
+              <li data-pt="✓ Carrossel de Imagens" data-en="✓ Image Carousel">✓ Carrossel de Imagens</li>
+              <li data-pt="✓ Design Responsivo" data-en="✓ Responsive Design">✓ Design Responsivo</li>
+            </ul>
+          </div>
+          <a href="XPlace-Core-Studium/Projeto X Place/index.html" class="btn-primary" target="_blank" rel="noopener" data-pt="Ver Projeto →" data-en="View Project →">Ver Projeto →</a>
         </div>
 
+        <!-- RemindMail -->
+        <div class="proj-card">
+          <div class="proj-name">RemindMail</div>
+          <p class="proj-desc"
+             data-pt="Aplicação full stack com React, Node.js e PostgreSQL. Sistema completo de lembretes por e-mail com agendamento, autenticação JWT, repetição automática e envio via Brevo."
+             data-en="Full stack app with React, Node.js and PostgreSQL. Complete email reminder system with scheduling, JWT authentication, automatic recurrence and sending via Brevo.">
+            Aplicação full stack com React, Node.js e PostgreSQL. Sistema completo de lembretes por e-mail com agendamento, autenticação JWT, repetição automática e envio via Brevo.
+          </p>
+          <div class="pills">
+            <span class="pill">React</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Tailwind CSS</span>
+            <span class="pill">JWT</span>
+          </div>
+          <div class="proj-feats">
+            <p data-pt="Recursos" data-en="Features">Recursos</p>
+            <ul>
+              <li data-pt="✓ Autenticação JWT completa" data-en="✓ Full JWT Authentication">✓ Autenticação JWT completa</li>
+              <li data-pt="✓ Agendamento com fuso horário correto" data-en="✓ Scheduling with correct timezone">✓ Agendamento com fuso horário correto</li>
+              <li data-pt="✓ Repetição diária / semanal / mensal" data-en="✓ Daily / weekly / monthly recurrence">✓ Repetição diária / semanal / mensal</li>
+              <li data-pt="✓ Verificação de e-mail no cadastro" data-en="✓ Email verification on signup">✓ Verificação de e-mail no cadastro</li>
+              <li data-pt="✓ Deploy no Render" data-en="✓ Deployed on Render">✓ Deploy no Render</li>
+            </ul>
+          </div>
+          <a href="https://remindmail.onrender.com" class="btn-primary" target="_blank" rel="noopener" data-pt="Acessar App →" data-en="Open App →">Acessar App →</a>
+        </div>
 
-        <div class="linha"></div>
-        <nav class="links">
+      </div>
+    </section>
 
+    <!-- MINI PROJETOS -->
+    <section id="mini">
+      <div class="sec-header fade-up">
+        <div class="sec-label" data-pt="Laboratório" data-en="Lab">Laboratório</div>
+        <h2 class="sec-title" data-pt="Mini Projetos" data-en="Mini Projects">Mini Projetos</h2>
+        <p class="sec-sub" data-pt="Experimentos e ferramentas que criei" data-en="Experiments and tools I built">Experimentos e ferramentas que criei</p>
+      </div>
 
-            <div class="linha-titulos">
-                <h1 class="l-titulos" data-pt="Projetos" data-en="Projects">Projetos</h1>
-                <h1 class="l-contato" data-pt="Contato" data-en="Contact">Contato</h1>
-                <h1 class="l-titulos" data-pt="Redes" data-en="Networks">Redes</h1>
+      <div class="mini-stack">
+
+        <!-- Space InPython -->
+        <div class="mcard fade-up">
+          <div class="mcard-accent purple"></div>
+          <div class="mcard-body">
+            <div class="mcard-videos">
+              <video controls preload="metadata"><source src="spaceinpython.mp4" type="video/mp4"></video>
             </div>
-
-            <div class="linha-links">
-                <a href="projetos.html" class="projetos" data-pt="Clique aqui, e veja alguns dos projetos que já desenvolvi!"
-                    data-en="Click here to see some of the projects I've developed!">Clique aqui, e veja alguns dos
-                    projetos que já desenvolvi!</a>
-
-                <div class="contato" data-pt="Segue minhas informações para contato!"
-                    data-en="Follow my contact information!">Segue minhas informações para contato!</div>
-
-                <div class="redes" data-pt="Linkedin, Github, Etc..." data-en="Linkedin, Github, Etc...">Linkedin,
-                    Github, Etc...</div>
+            <div class="mcard-info">
+              <div class="mcard-num purple">01</div>
+              <div class="mcard-name" data-pt="Space InPython" data-en="Space InPython">Space InPython</div>
+              <p class="mcard-desc"
+                 data-pt="Jogo estilo Space Invaders feito com Pygame. Nave espacial, ondas de inimigos, power-ups e dificuldade progressiva por nível."
+                 data-en="Space Invaders-style game built with Pygame. Spaceship, enemy waves, power-ups and progressive difficulty per level.">
+                Jogo estilo Space Invaders feito com Pygame. Nave espacial, ondas de inimigos, power-ups e dificuldade progressiva por nível.
+              </p>
+              <div class="mcard-tags">
+                <span class="mtag purple">Python</span>
+                <span class="mtag purple">Pygame</span>
+                <span class="mtag purple">Game Dev</span>
+              </div>
+              <div class="mcard-hl">
+                <div class="hl-item">🎮 <span data-pt="Controles fluidos com teclado" data-en="Smooth keyboard controls">Controles fluidos com teclado</span></div>
+                <div class="hl-item">⚡ <span data-pt="4 tipos de power-ups" data-en="4 types of power-ups">4 tipos de power-ups</span></div>
+                <div class="hl-item">📈 <span data-pt="Dificuldade progressiva" data-en="Progressive difficulty">Dificuldade progressiva</span></div>
+              </div>
             </div>
+          </div>
+        </div>
 
-        </nav>
+        <!-- Validador CPF -->
+        <div class="mcard fade-up">
+          <div class="mcard-accent green"></div>
+          <div class="mcard-body rev">
+            <div class="mcard-info">
+              <div class="mcard-num green">02</div>
+              <div class="mcard-name" data-pt="Validador de CPF" data-en="CPF Validator">Validador de CPF</div>
+              <p class="mcard-desc"
+                 data-pt="Ferramenta de validação de CPF em duas versões: web interativa (HTML/CSS/JS) e terminal (Python), com algoritmo oficial e formatação automática."
+                 data-en="CPF validation tool in two versions: interactive web (HTML/CSS/JS) and terminal (Python), with official algorithm and auto-formatting.">
+                Ferramenta de validação de CPF em duas versões: web interativa (HTML/CSS/JS) e terminal (Python), com algoritmo oficial e formatação automática.
+              </p>
+              <div class="mcard-tags">
+                <span class="mtag green">Python</span>
+                <span class="mtag green">HTML5</span>
+                <span class="mtag green">JavaScript</span>
+              </div>
+              <div class="mcard-hl">
+                <div class="hl-item">🔢 <span data-pt="Algoritmo oficial de validação" data-en="Official validation algorithm">Algoritmo oficial de validação</span></div>
+                <div class="hl-item">🌐 <span data-pt="Versão web + terminal" data-en="Web + terminal version">Versão web + terminal</span></div>
+                <div class="hl-item">✨ <span data-pt="Formatação automática" data-en="Auto-formatting">Formatação automática</span></div>
+              </div>
+            </div>
+            <div class="mcard-videos">
+              <span class="vid-lbl" data-pt="Versão Web" data-en="Web Version">Versão Web</span>
+              <video controls preload="metadata"><source src="cpfhtml.mp4" type="video/mp4"></video>
+              <span class="vid-lbl" data-pt="Versão Python" data-en="Python Version">Versão Python</span>
+              <video controls preload="metadata"><source src="cpfpy.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+        </div>
 
-        <footer>
+        <!-- To-Do List -->
+        <div class="mcard fade-up">
+          <div class="mcard-accent blue"></div>
+          <div class="mcard-body">
+            <div class="mcard-videos">
+              <video controls preload="metadata"><source src="todolist.mp4" type="video/mp4"></video>
+            </div>
+            <div class="mcard-info">
+              <div class="mcard-num blue">03</div>
+              <div class="mcard-name">To-Do List</div>
+              <p class="mcard-desc"
+                 data-pt="App de tarefas com persistência via localStorage, contador de itens ativos e opção de limpar tudo."
+                 data-en="Task app with localStorage persistence, active item counter and clear all option.">
+                App de tarefas com persistência via localStorage, contador de itens ativos e opção de limpar tudo.
+              </p>
+              <div class="mcard-tags">
+                <span class="mtag blue">HTML5</span>
+                <span class="mtag blue">CSS3</span>
+                <span class="mtag blue">JavaScript</span>
+              </div>
+              <div class="mcard-hl">
+                <div class="hl-item">💾 <span data-pt="Dados salvos no localStorage" data-en="Data saved in localStorage">Dados salvos no localStorage</span></div>
+                <div class="hl-item">✅ <span data-pt="Marcar como concluída" data-en="Mark as done">Marcar como concluída</span></div>
+                <div class="hl-item">🧹 <span data-pt="Limpar tudo com confirmação" data-en="Clear all with confirmation">Limpar tudo com confirmação</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Nomear Tudo -->
+        <div class="mcard fade-up">
+          <div class="mcard-accent orange"></div>
+          <div class="mcard-body rev">
+            <div class="mcard-info">
+              <div class="mcard-num orange">04</div>
+              <div class="mcard-name" data-pt="Nomear Tudo" data-en="Rename Everything">Nomear Tudo</div>
+              <p class="mcard-desc"
+                 data-pt="Dois scripts Python para automação de arquivos: renomeia em lote seguindo um padrão e cria arquivos .txt com nomes aleatórios."
+                 data-en="Two Python scripts for file automation: batch-rename files following a pattern and create .txt files with random names.">
+                Dois scripts Python para automação de arquivos: renomeia em lote seguindo um padrão e cria arquivos .txt com nomes aleatórios.
+              </p>
+              <div class="mcard-tags">
+                <span class="mtag orange">Python</span>
+                <span class="mtag orange">CLI</span>
+                <span class="mtag orange" data-pt="Automação" data-en="Automation">Automação</span>
+              </div>
+              <div class="mcard-hl">
+                <div class="hl-item">📁 <span data-pt="Renomeação em lote" data-en="Batch renaming">Renomeação em lote</span></div>
+                <div class="hl-item">🎲 <span data-pt="Criação aleatória de arquivos" data-en="Random file creation">Criação aleatória de arquivos</span></div>
+                <div class="hl-item">⌨️ <span data-pt="Interface via terminal" data-en="Terminal interface">Interface via terminal</span></div>
+              </div>
+            </div>
+            <div class="mcard-videos">
+              <video controls preload="metadata"><source src="criarrenomear.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+        </div>
 
+      </div>
+    </section>
 
-        </footer>
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="sec-header fade-up">
+        <div class="sec-label" data-pt="Vamos conversar" data-en="Let's talk">Vamos conversar</div>
+        <h2 class="sec-title" data-pt="Contato & Redes" data-en="Contact & Networks">Contato & Redes</h2>
+        <p class="sec-sub" data-pt="Me encontre por aqui" data-en="Find me here">Me encontre por aqui</p>
+      </div>
 
-    </main>
+      <div class="contact-grid stagger">
+        <a class="contact-card" href="mailto:lucianopereiradejesus14@gmail.com">
+          <div class="contact-card-icon">✉️</div>
+          <div class="contact-card-label">E-mail</div>
+          <div class="contact-card-value">lucianopereiradejesus14@gmail.com</div>
+        </a>
+        <a class="contact-card" href="https://github.com/lucianopereiradev" target="_blank" rel="noopener">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="color:var(--accent)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="contact-card-label">GitHub</div>
+          <div class="contact-card-value">github.com/lucianopereiradev</div>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/luciano-pereira-de-jesus-b1060439a" target="_blank" rel="noopener">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="color:var(--accent)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">luciano-pereira-de-jesus</div>
+        </a>
+      </div>
 
+      <!-- CV download -->
+      <div class="cv-box fade-up">
+        <div class="cv-box-text">
+          <h3 data-pt="Currículo" data-en="Resume">Currículo</h3>
+          <p data-pt="Baixe meu currículo completo em PDF" data-en="Download my full resume as PDF">Baixe meu currículo completo em PDF</p>
+        </div>
+        <a href="curriculo-luciano-pereira.pdf" download class="btn-primary" data-pt="⬇ Baixar CV" data-en="⬇ Download CV">⬇ Baixar CV</a>
+      </div>
+    </section>
 
-    <script src="script.js?v=4"></script>
+  </div><!-- /main -->
 
-
+  <script src="script.js"></script>
 </body>
-
 </html>
