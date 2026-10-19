@@ -1,0 +1,199 @@
+{
+  "projetos": [
+    {
+      "titulo": "RemindMail",
+      "titulo_en": "",
+      "categoria": "projeto",
+      "descricao": "Aplicação full stack com React, Node.js e PostgreSQL. Sistema completo de lembretes por e-mail com agendamento, autenticação JWT, repetição automática e envio via Brevo.",
+      "descricao_en": "Full stack app with React, Node.js and PostgreSQL. A complete e-mail reminder system with scheduling, JWT authentication, automatic recurrence and delivery through Brevo.",
+      "tecnologias": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "JWT"
+      ],
+      "recursos": [
+        "Autenticação JWT completa",
+        "Agendamento com fuso horário correto",
+        "Repetição diária, semanal ou mensal",
+        "Verificação de e-mail no cadastro",
+        "Publicado no Render"
+      ],
+      "recursos_en": [
+        "Full JWT authentication",
+        "Scheduling with the correct time zone",
+        "Daily, weekly or monthly recurrence",
+        "E-mail verification on sign-up",
+        "Deployed on Render"
+      ],
+      "videos": [],
+      "capa": "/assets/uploads/remindmail-capa.jpg",
+      "link": "https://remindmail.onrender.com",
+      "codigo": "https://github.com/lucianopereiradev/RemindMail"
+    },
+    {
+      "titulo": "XPlace Core — Studium",
+      "titulo_en": "",
+      "categoria": "projeto",
+      "descricao": "Plataforma web completa com sistema de autenticação, dashboard interativo, loja de produtos e carrossel de imagens. Desenvolvida com HTML, CSS e JavaScript puro.",
+      "descricao_en": "Complete web platform with authentication, an interactive dashboard, a product store and an image carousel. Built with plain HTML, CSS and JavaScript.",
+      "tecnologias": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "recursos": [
+        "Sistema de login e cadastro",
+        "Dashboard personalizável",
+        "Loja online",
+        "Carrossel de imagens",
+        "Design responsivo"
+      ],
+      "recursos_en": [
+        "Login and sign-up system",
+        "Customizable dashboard",
+        "Online store",
+        "Image carousel",
+        "Responsive design"
+      ],
+      "videos": [],
+      "capa": "/assets/uploads/xplace-capa.jpg",
+      "link": "/projetos/xplace/",
+      "codigo": ""
+    },
+    {
+      "titulo": "Space InPython",
+      "titulo_en": "",
+      "categoria": "mini",
+      "descricao": "Jogo estilo Space Invaders feito com Pygame: nave espacial, ondas de inimigos, power-ups e dificuldade que aumenta a cada nível.",
+      "descricao_en": "A Space Invaders-style game built with Pygame: a spaceship, enemy waves, power-ups and difficulty that ramps up every level.",
+      "tecnologias": [
+        "Python",
+        "Pygame",
+        "Game Dev"
+      ],
+      "recursos": [
+        "Controles fluidos pelo teclado",
+        "4 tipos de power-ups",
+        "Dificuldade progressiva"
+      ],
+      "recursos_en": [
+        "Smooth keyboard controls",
+        "4 types of power-ups",
+        "Progressive difficulty"
+      ],
+      "videos": [
+        {
+          "arquivo": "/assets/uploads/spaceinpython.mp4",
+          "rotulo": "",
+          "rotulo_en": ""
+        }
+      ],
+      "capa": "",
+      "link": "",
+      "codigo": ""
+    },
+    {
+      "titulo": "Validador de CPF",
+      "titulo_en": "CPF Validator",
+      "categoria": "mini",
+      "descricao": "Ferramenta de validação de CPF em duas versões, web interativa (HTML/CSS/JS) e terminal (Python), com o algoritmo oficial e formatação automática.",
+      "descricao_en": "A CPF (Brazilian ID) validator in two versions, interactive web (HTML/CSS/JS) and terminal (Python), using the official algorithm with automatic formatting.",
+      "tecnologias": [
+        "Python",
+        "HTML5",
+        "JavaScript"
+      ],
+      "recursos": [
+        "Algoritmo oficial de validação",
+        "Versão web e versão terminal",
+        "Formatação automática"
+      ],
+      "recursos_en": [
+        "Official validation algorithm",
+        "Web and terminal versions",
+        "Automatic formatting"
+      ],
+      "videos": [
+        {
+          "arquivo": "/assets/uploads/cpfhtml.mp4",
+          "rotulo": "Versão Web",
+          "rotulo_en": "Web"
+        },
+        {
+          "arquivo": "/assets/uploads/cpfpy.mp4",
+          "rotulo": "Versão Python",
+          "rotulo_en": "Python"
+        }
+      ],
+      "capa": "",
+      "link": "",
+      "codigo": ""
+    },
+    {
+      "titulo": "To-Do List",
+      "titulo_en": "",
+      "categoria": "mini",
+      "descricao": "App de tarefas com dados salvos no navegador (localStorage), contador de tarefas ativas e opção de limpar tudo.",
+      "descricao_en": "A task app that saves data in the browser (localStorage), with an active task counter and a clear-all option.",
+      "tecnologias": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "recursos": [
+        "Dados salvos no localStorage",
+        "Marcar tarefa como concluída",
+        "Limpar tudo com confirmação"
+      ],
+      "recursos_en": [
+        "Data saved in localStorage",
+        "Mark tasks as done",
+        "Clear all with confirmation"
+      ],
+      "videos": [
+        {
+          "arquivo": "/assets/uploads/todolist.mp4",
+          "rotulo": "",
+          "rotulo_en": ""
+        }
+      ],
+      "capa": "",
+      "link": "",
+      "codigo": ""
+    },
+    {
+      "titulo": "Nomear Tudo",
+      "titulo_en": "Rename Everything",
+      "categoria": "mini",
+      "descricao": "Dois scripts Python para automatizar arquivos: um renomeia em lote seguindo um padrão e o outro cria arquivos .txt com nomes aleatórios.",
+      "descricao_en": "Two Python scripts for file automation: one batch-renames files following a pattern and the other creates .txt files with random names.",
+      "tecnologias": [
+        "Python",
+        "CLI",
+        "Automação"
+      ],
+      "recursos": [
+        "Renomeação de arquivos em lote",
+        "Criação de arquivos com nomes aleatórios",
+        "Interface pelo terminal"
+      ],
+      "recursos_en": [
+        "Batch file renaming",
+        "Random file creation",
+        "Terminal interface"
+      ],
+      "videos": [
+        {
+          "arquivo": "/assets/uploads/criarrenomear.mp4",
+          "rotulo": "",
+          "rotulo_en": ""
+        }
+      ],
+      "capa": "",
+      "link": "",
+      "codigo": ""
+    }
+  ]
+}

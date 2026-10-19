@@ -1,0 +1,95 @@
+backend:
+  name: github
+  repo: lucianopereiradev/Luciano-Portifolio
+  branch: main
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: conteudo
+    label: Conteúdo do site
+    files:
+      - name: projetos
+        label: Projetos
+        file: data/projetos.json
+        fields:
+          - name: projetos
+            label: Projetos
+            label_singular: Projeto
+            widget: list
+            collapsed: true
+            fields:
+              - name: titulo
+                label: "Título"
+                widget: string
+
+              - name: titulo_en
+                label: "Título (inglês)"
+                widget: string
+                required: false
+
+              - name: categoria
+                label: "Categoria"
+                widget: select
+                default: mini
+                options:
+                  - { label: "Projeto principal", value: projeto }
+                  - { label: "Mini projeto", value: mini }
+
+              - name: descricao
+                label: "Descrição"
+                widget: text
+
+              - name: descricao_en
+                label: "Descrição (inglês)"
+                widget: text
+                required: false
+
+              - name: tecnologias
+                label: "Tecnologias"
+                widget: list
+                required: false
+
+              - name: recursos
+                label: "Destaques"
+                widget: list
+                required: false
+
+              - name: recursos_en
+                label: "Destaques (inglês)"
+                widget: list
+                required: false
+
+              - name: videos
+                label: "Vídeos"
+                label_singular: "Vídeo"
+                widget: list
+                required: false
+                fields:
+                  - name: arquivo
+                    label: "Arquivo"
+                    widget: file
+                  - name: rotulo
+                    label: "Nome da aba"
+                    widget: string
+                    required: false
+                  - name: rotulo_en
+                    label: "Nome da aba (inglês)"
+                    widget: string
+                    required: false
+
+              - name: capa
+                label: "Imagem de capa"
+                widget: image
+                required: false
+
+              - name: link
+                label: "Link do projeto"
+                widget: string
+                required: false
+
+              - name: codigo
+                label: "Repositório no GitHub"
+                widget: string
+                required: false

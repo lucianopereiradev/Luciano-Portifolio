@@ -1,0 +1,354 @@
+:root {
+    --azul: #00aaff;
+    --azul-glow: #00aaff7c;
+    --fundo: #02040a;
+    --cinza: #a7b5c9;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, #05070c, #0b0e18 60%, #0d1220);
+    color: white;
+    padding-top: 78px;
+    /* espaço para navbar fixa */
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 78px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #0c1a29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo {
+    margin-right: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cinza);
+    font-size: 16px;
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: var(--azul);
+}
+
+/* ===== LUPA ===== */
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.search-btn img {
+    height: 20px;
+    opacity: .7;
+    transition: .2s;
+    filter: brightness(0) invert(1);
+}
+
+.search-btn:hover img {
+    opacity: 1;
+}
+
+.search-area {
+    position: relative;
+}
+
+.search-box {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #0d1118;
+    padding: 8px;
+    border-radius: 6px;
+    display: none;
+    box-shadow: 0 0 10px var(--azul-glow);
+}
+
+.search-box input {
+    background: #0b0f15;
+    border: 1px solid #1b2a40;
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.search-box button {
+    background: var(--azul);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.store-hero {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.store-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--azul);
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px var(--azul-glow);
+}
+
+.store-hero p {
+    color: var(--cinza);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* ===== PRODUTOS ===== */
+.produtos-container {
+    width: 95%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.produto-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 16px;
+    transition: .25s;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px var(--azul-glow);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.produto-card h3 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.produto-card p {
+    color: var(--cinza);
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.produto-preco {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #0a0a0a;
+    padding: 50px 80px 120px;
+    color: #cfcfcf;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.footer-column h3 {
+    color: #7f00ff;
+    font-size: 17px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.footer-column a {
+    display: block;
+    color: #cfcfcf;
+    font-size: 14px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: #4cc9f0;
+}
+
+.social-icons i {
+    font-size: 18px;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.social-icons i:hover {
+    color: #7f00ff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #151515;
+    margin-top: 40px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+.footer-links a {
+    color: #b8b8b8;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: #7f00ff;
+}
+
+.footer-country a {
+    color: #4cc9f0;
+    text-decoration: none;
+}
+
+.back-to-top {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    background: #7f00ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.back-to-top i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    background: #5b00c2;
+}
+
+/* Mantém todo o CSS antigo da loja + ajustes */
+
+.produtos-container {
+    padding: 50px 20px;
+    /* espaçamento do topo e do footer */
+}
+
+.scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.grid-produtos {
+    display: flex;
+    flex-wrap: nowrap;
+    /* não quebra a linha */
+    overflow-x: auto;
+    /* permite scroll horizontal */
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+
+    /* ESCONDER A BARRA DE ROLAGEM */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.grid-produtos::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+
+.produto-card {
+    flex: 0 0 220px;
+    /* largura fixa, não encolhe */
+    background: #131313;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #868181;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}

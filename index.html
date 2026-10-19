@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <title>Luciano Pereira · Desenvolvedor em formação</title>
+  <meta name="description" content="Luciano Pereira, desenvolvedor em formação e jovem aprendiz na Seguros Sura. Projetos em JavaScript, React, Node.js e Python, com foco em web e automação.">
+  <meta name="author" content="Luciano Pereira de Jesus">
+  <meta name="theme-color" content="#08061a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://lucianopdev.netlify.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="Luciano Pereira">
+  <meta property="og:title" content="Luciano Pereira · Desenvolvedor em formação">
+  <meta property="og:description" content="Jovem aprendiz na Seguros Sura e estudante de Desenvolvimento de Sistemas na ETEC. Veja meus projetos em web e automação.">
+  <meta property="og:url" content="https://lucianopdev.netlify.app/">
+  <meta property="og:image" content="https://lucianopdev.netlify.app/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luciano Pereira, desenvolvedor em formação">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Luciano Pereira · Desenvolvedor em formação">
+  <meta name="twitter:description" content="Jovem aprendiz na Seguros Sura e estudante de Desenvolvimento de Sistemas na ETEC. Veja meus projetos em web e automação.">
+  <meta name="twitter:image" content="https://lucianopdev.netlify.app/assets/img/og-image.png">
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/funko.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Luciano Pereira de Jesus",
+    "url": "https://lucianopdev.netlify.app/",
+    "image": "https://lucianopdev.netlify.app/assets/img/og-image.png",
+    "jobTitle": "Jovem Aprendiz · Operações",
+    "worksFor": { "@type": "Organization", "name": "Seguros Sura" },
+    "affiliation": { "@type": "EducationalOrganization", "name": "ETEC de Embu das Artes" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Taboão da Serra", "addressRegion": "SP", "addressCountry": "BR" },
+    "knowsAbout": ["JavaScript", "React", "Node.js", "PostgreSQL", "Python", "Automação de processos"],
+    "sameAs": [
+      "https://github.com/lucianopereiradev",
+      "https://www.linkedin.com/in/luciano-pereira-de-jesus-b1060439a"
+    ]
+  }
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+    <div class="bg-spot"></div>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <!-- ── NAVEGAÇÃO ── -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="brand" aria-label="Luciano Pereira — início">
+        <span class="brand-mark">LP</span>
+        <span class="brand-name">Luciano<span class="grad">.dev</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Seções">
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <a href="#inicio" data-i18n="nav.inicio">Início</a>
+        <a href="#trajetoria" data-i18n="nav.trajetoria">Trajetória</a>
+        <a href="#projetos" data-i18n="nav.projetos">Projetos</a>
+        <a href="#contato" data-i18n="nav.contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks"
+                aria-label="Abrir menu" data-i18n-attr="aria-label:menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ── INÍCIO ── -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow reveal" style="--d:.05s">
+            <span class="pulse" aria-hidden="true"></span>
+            <span data-i18n="hero.tag">Jovem Aprendiz · Seguros Sura</span>
+          </p>
+
+          <h1 class="hero-name reveal" style="--d:.12s">
+            <span>Luciano Pereira</span>
+            <span class="grad-anim">de Jesus</span>
+          </h1>
+
+          <p class="hero-headline reveal" style="--d:.2s" data-i18n="hero.headline">Transformo ideias e processos repetitivos em <span class="grad">código</span>.</p>
+
+          <ul class="hero-meta reveal" style="--d:.28s">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <span data-i18n="hero.idade">17 anos</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span data-i18n="hero.local">Taboão da Serra — SP</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"/></svg>
+              <span>ETEC Embu das Artes</span>
+            </li>
+          </ul>
+
+          <p class="hero-bio reveal" style="--d:.36s" data-i18n="hero.bio">Sou jovem aprendiz no setor de Operações da Seguros Sura e estou no 2º ano do Ensino Médio integrado ao Técnico em Desenvolvimento de Sistemas na ETEC de Embu das Artes. Gosto de usar a programação para resolver problemas reais: automatizar o que é repetitivo, tirar ideias do papel e entender cada parte do processo, do front-end ao banco de dados. Aqui estão os projetos que marcam essa evolução.</p>
+
+          <div class="hero-ctas reveal" style="--d:.44s">
+            <a href="#projetos" class="btn btn-primary">
+              <span data-i18n="hero.cta1">Ver projetos</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#contato" class="btn btn-ghost"><span data-i18n="hero.cta2">Fale comigo</span></a>
+          </div>
+
+          <div class="hero-social reveal" style="--d:.52s">
+            <a class="icon-btn" href="https://github.com/lucianopereiradev" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/luciano-pereira-de-jesus-b1060439a" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a class="icon-btn" href="mailto:lucianopereiradejesus14@gmail.com" aria-label="E-mail">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" id="heroVisual" style="--d:.15s">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="disc" aria-hidden="true"></div>
+          <div class="ring" aria-hidden="true"></div>
+          <div class="ring ring-2" aria-hidden="true"></div>
+          <div class="floor" aria-hidden="true"></div>
+          <div class="funko-wrap">
+            <img class="funko" src="assets/img/funko.png" width="362" height="578" fetchpriority="high"
+                 alt="Boneco estilo Funko Pop do Luciano: cabelo cacheado, camiseta vinho e calça preta"
+                 data-i18n-attr="alt:hero.alt">
+          </div>
+          <span class="chip c1" aria-hidden="true"><i style="--c:#61dafb"></i>React</span>
+          <span class="chip c2" aria-hidden="true"><i style="--c:#ffd43b"></i>Python</span>
+          <span class="chip c3" aria-hidden="true"><i style="--c:#7bd88f"></i>Node.js</span>
+          <span class="chip c4" aria-hidden="true"><i style="--c:#c084fc"></i><span data-i18n="hero.chip">Automação</span></span>
+        </div>
+      </div>
+
+      <a href="#trajetoria" class="scroll-hint" aria-label="Rolar para baixo" data-i18n-attr="aria-label:hero.scroll"><span></span></a>
+    </section>
+
+    <!-- ── TRAJETÓRIA ── -->
+    <section class="section" id="trajetoria">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">// <span data-i18n="traj.kicker">sobre mim</span></p>
+          <h2 class="section-title" data-i18n="traj.title">Minha <span class="grad">trajetória</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <p class="about-lead" data-i18n="traj.lead">De jogos em Pygame a aplicações full stack. E agora, automações no dia a dia de uma seguradora.</p>
+            <div class="stats" id="stats">
+              <div class="stat">
+                <strong class="grad" id="statProjetos">–</strong>
+                <span data-i18n="traj.stat1">projetos no portfólio</span>
+              </div>
+              <div class="stat">
+                <strong class="grad" id="statTecs">–</strong>
+                <span data-i18n="traj.stat2">tecnologias usadas</span>
+              </div>
+              <div class="stat">
+                <strong class="grad">2º</strong>
+                <span data-i18n="traj.stat3">ano do técnico na ETEC</span>
+              </div>
+            </div>
+          </div>
+
+          <ol class="timeline">
+            <li class="tl-item now reveal">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <div class="tl-card">
+                <div class="tl-top">
+                  <span class="tl-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+                  <span class="tl-date" data-i18n="traj.t1.date">2026 — hoje</span>
+                  <span class="badge-now" data-i18n="traj.agora">Agora</span>
+                </div>
+                <h3>Seguros Sura</h3>
+                <p class="tl-role" data-i18n="traj.t1.role">Jovem Aprendiz · Operações</p>
+                <p data-i18n="traj.t1.desc">Atuo no setor de Operações e uso a programação para criar automações que deixam os processos do dia a dia mais rápidos.</p>
+              </div>
+            </li>
+            <li class="tl-item reveal" style="--d:.08s">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <div class="tl-card">
+                <div class="tl-top">
+                  <span class="tl-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"/></svg></span>
+                  <span class="tl-date">2025 — 2027</span>
+                </div>
+                <h3>ETEC de Embu das Artes</h3>
+                <p class="tl-role" data-i18n="traj.t2.role">Ensino Médio + Técnico em Desenvolvimento de Sistemas</p>
+                <p data-i18n="traj.t2.desc">Cursando o 2º ano, com base em lógica de programação e desenvolvimento de sistemas.</p>
+              </div>
+            </li>
+            <li class="tl-item reveal" style="--d:.16s">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <div class="tl-card">
+                <div class="tl-top">
+                  <span class="tl-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 4l-4 16"/></svg></span>
+                  <span class="tl-date" data-i18n="traj.t3.date">Em paralelo</span>
+                </div>
+                <h3 data-i18n="traj.t3.title">Projetos pessoais</h3>
+                <p class="tl-role" data-i18n="traj.t3.role">Aprendendo na prática</p>
+                <p data-i18n="traj.t3.desc">Aprendo construindo: de jogos em Python a aplicações full stack publicadas na internet.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TECNOLOGIAS ── -->
+    <section class="stack" aria-labelledby="stackTitle">
+      <div class="container">
+        <p class="kicker reveal">// <span id="stackTitle" data-i18n="stack.title">tecnologias que uso</span></p>
+      </div>
+      <div class="marquee"><div class="marquee-track" id="marqueeA"></div></div>
+      <div class="marquee reverse"><div class="marquee-track" id="marqueeB"></div></div>
+    </section>
+
+    <!-- ── PROJETOS ── -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">// <span data-i18n="proj.kicker">trabalhos</span></p>
+          <h2 class="section-title" data-i18n="proj.title">Meus <span class="grad">projetos</span></h2>
+          <p class="section-sub" data-i18n="proj.sub">Do jogo em Python à aplicação full stack: o que venho construindo.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrar projetos" data-i18n-attr="aria-label:proj.filtrar">
+          <span class="filter-pill" aria-hidden="true"></span>
+          <button type="button" class="filter" data-filter="todos" aria-pressed="true">
+            <span data-i18n="proj.f.todos">Todos</span><span class="count" data-count-for="todos"></span>
+          </button>
+          <button type="button" class="filter" data-filter="projeto" aria-pressed="false">
+            <span data-i18n="proj.f.projeto">Projetos</span><span class="count" data-count-for="projeto"></span>
+          </button>
+          <button type="button" class="filter" data-filter="mini" aria-pressed="false">
+            <span data-i18n="proj.f.mini">Mini projetos</span><span class="count" data-count-for="mini"></span>
+          </button>
+        </div>
+
+        <div class="projects" id="projectsGrid">
+          <div class="card skeleton feature" aria-hidden="true"></div>
+          <div class="card skeleton" aria-hidden="true"></div>
+          <div class="card skeleton" aria-hidden="true"></div>
+        </div>
+        <p class="state" id="projectsState" hidden></p>
+        <noscript><p class="state">Ative o JavaScript para ver os projetos.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ── CONTATO ── -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-glow" aria-hidden="true"></div>
+          <p class="kicker">// <span data-i18n="contato.kicker">contato</span></p>
+          <h2 class="contact-title" data-i18n="contato.title">Vamos <span class="grad">conversar?</span></h2>
+          <p class="contact-text" data-i18n="contato.text">Estou sempre aberto a trocar ideias, aprender e colaborar em projetos. Me chama por um destes canais:</p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <a class="contact-link" href="mailto:lucianopereiradejesus14@gmail.com">
+                <span class="contact-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                <span class="contact-info">
+                  <span class="contact-label">E-mail</span>
+                  <span class="contact-value">lucianopereiradejesus14@gmail.com</span>
+                </span>
+              </a>
+              <button class="copy-btn" id="copyEmail" type="button" aria-label="Copiar e-mail" data-i18n-attr="aria-label:contato.copiar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              </button>
+            </div>
+            <a class="contact-card" href="https://github.com/lucianopereiradev" target="_blank" rel="noopener">
+              <span class="contact-link">
+                <span class="contact-ico"><svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></span>
+                <span class="contact-info">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">lucianopereiradev</span>
+                </span>
+              </span>
+              <svg class="contact-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/luciano-pereira-de-jesus-b1060439a" target="_blank" rel="noopener">
+              <span class="contact-link">
+                <span class="contact-ico"><svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+                <span class="contact-info">
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">Luciano Pereira de Jesus</span>
+                </span>
+              </span>
+              <svg class="contact-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Luciano Pereira de Jesus</p>
+      <p data-i18n="footer.feito">Feito com HTML, CSS e JavaScript · Hospedado na Netlify</p>
+      <a href="#inicio" class="to-top" data-i18n="footer.topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Vídeo do projeto">
+    <button class="lightbox-close" type="button" aria-label="Fechar" data-i18n-attr="aria-label:ui.fechar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <video controls playsinline></video>
+    <p class="lightbox-caption"></p>
+  </dialog>
+</body>
+</html>
