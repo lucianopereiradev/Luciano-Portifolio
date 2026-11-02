@@ -104,7 +104,7 @@
     'typescript': '#3178c6', 'python': '#ffd43b', 'pygame': '#7bd88f', 'react': '#61dafb', 'node.js': '#7bd88f',
     'postgresql': '#6b8cff', 'tailwind css': '#38bdf8', 'jwt': '#e879f9', 'git': '#f05032', 'github': '#ffffff',
     'bootstrap': '#a87bff', 'sql': '#60a5fa', 'excel': '#21a366', 'vba': '#21a366', 'selenium': '#43b02a',
-    'power automate': '#2f8cff', 'power bi': '#f2c811', 'brevo': '#0bd18a', 'render': '#46e3b7', 'java': '#f89820',
+    'power automate': '#2f8cff', 'power bi': '#f2c811', 'brevo': '#0bd18a', 'render': '#46e3b7', 'supabase': '#3ecf8e', 'cloudflare': '#f38020', 'java': '#f89820',
   };
 
   // ---------- Idioma ----------

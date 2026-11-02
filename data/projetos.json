@@ -4,32 +4,33 @@
       "titulo": "RemindMail",
       "titulo_en": "",
       "categoria": "projeto",
-      "descricao": "Aplicação full stack com React, Node.js e PostgreSQL. Sistema completo de lembretes por e-mail com agendamento, autenticação JWT, repetição automática e envio via Brevo.",
-      "descricao_en": "Full stack app with React, Node.js and PostgreSQL. A complete e-mail reminder system with scheduling, JWT authentication, automatic recurrence and delivery through Brevo.",
+      "descricao": "Aplicação full stack de lembretes por e-mail: você cria o compromisso e recebe o e-mail na hora marcada. React no front-end, Supabase (Postgres com Row Level Security) no banco, agendamento com pg_cron e envio por uma Edge Function com a Brevo.",
+      "descricao_en": "Full stack e-mail reminder app: create an appointment and get an e-mail at the scheduled time. React on the front end, Supabase (Postgres with Row Level Security) for data, pg_cron for scheduling and an Edge Function that sends through Brevo.",
       "tecnologias": [
         "React",
-        "Node.js",
+        "Supabase",
         "PostgreSQL",
         "Tailwind CSS",
-        "JWT"
+        "Cloudflare",
+        "Brevo"
       ],
       "recursos": [
-        "Autenticação JWT completa",
-        "Agendamento com fuso horário correto",
-        "Repetição diária, semanal ou mensal",
-        "Verificação de e-mail no cadastro",
-        "Publicado no Render"
+        "Cadastro com confirmação de e-mail e recuperação de senha",
+        "Aviso na hora ou com até 1 dia de antecedência",
+        "Repetição diária, semanal, mensal, anual ou em dias escolhidos",
+        "Fuso horário por usuário, agenda por dia e histórico de envios",
+        "Cada usuário só acessa os próprios dados (RLS)"
       ],
       "recursos_en": [
-        "Full JWT authentication",
-        "Scheduling with the correct time zone",
-        "Daily, weekly or monthly recurrence",
-        "E-mail verification on sign-up",
-        "Deployed on Render"
+        "Sign-up with e-mail confirmation and password recovery",
+        "Notice at the time or up to 1 day in advance",
+        "Daily, weekly, monthly, yearly or custom-day recurrence",
+        "Per-user time zone, daily agenda and send history",
+        "Each user can only access their own data (RLS)"
       ],
       "videos": [],
       "capa": "/assets/uploads/remindmail-capa.jpg",
-      "link": "https://remindmail.onrender.com",
+      "link": "https://remindmail.lucianopereiradejesus14.workers.dev",
       "codigo": "https://github.com/lucianopereiradev/RemindMail"
     },
     {
