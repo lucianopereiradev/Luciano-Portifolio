@@ -29,7 +29,7 @@
         "Each user can only access their own data (RLS)"
       ],
       "videos": [],
-      "capa": "/assets/uploads/remindmail-capa.jpg",
+      "capa": "/assets/uploads/remindmail-capa-v2.jpg",
       "link": "https://remindmail.lucianopereiradejesus14.workers.dev",
       "codigo": "https://github.com/lucianopereiradev/RemindMail"
     },

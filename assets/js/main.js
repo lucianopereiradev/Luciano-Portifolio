@@ -207,7 +207,8 @@
   const revealObserver = 'IntersectionObserver' in window
     ? new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+        // Na rolagem rápida do iPhone o elemento pode passar sem ser visto; se já ficou para trás, mostra também.
+        if (!entry.isIntersecting && entry.boundingClientRect.top > 0) return;
         entry.target.classList.add('in');
         revealObserver.unobserve(entry.target);
       });

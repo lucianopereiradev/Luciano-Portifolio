@@ -243,6 +243,8 @@ svg.fill { fill: currentColor; stroke: none; }
 
 /* ---------- Início ---------- */
 .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 90px; }
+/* Os anéis giram e, girando, a caixa deles passa da largura da tela; sem este corte o Safari do iPhone reduz a página inteira. */
+.hero { overflow-x: hidden; overflow-x: clip; }
 .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 48px; align-items: center; }
 
 .eyebrow {
@@ -749,6 +751,13 @@ svg.fill { fill: currentColor; stroke: none; }
   .stat span { font-size: .78rem; }
   .filter { font-size: .86rem; padding: 10px 8px; }
   .filter .count { display: none; }
+}
+
+/* Telas de toque: menos camadas animadas e desfocadas, que pesam na memória de vídeo do iPhone. */
+@media (hover: none) {
+  .blob { animation: none; will-change: auto; }
+  .halo { animation: none; }
+  .bg-spot { display: none; }
 }
 
 /* ---------- Menos movimento ---------- */
