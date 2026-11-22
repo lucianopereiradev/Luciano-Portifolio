@@ -1,6 +1,38 @@
 {
   "projetos": [
     {
+      "titulo": "Fluxo",
+      "titulo_en": "",
+      "categoria": "projeto",
+      "descricao": "Organizador de finanças pessoais local-first: os dados ficam no próprio aparelho, sem conta e sem login, e o app funciona offline. A sincronização entre aparelhos é opcional e criptografada de ponta a ponta, então o servidor só guarda dados que não consegue ler.",
+      "descricao_en": "Local-first personal finance organizer: data stays on your device, with no account or login, and the app works offline. Syncing between devices is optional and end-to-end encrypted, so the server only stores data it cannot read.",
+      "tecnologias": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "IndexedDB",
+        "Cloudflare"
+      ],
+      "recursos": [
+        "Cartão de crédito do jeito brasileiro: fechamento, vencimento e parcelas na fatura certa",
+        "Quanto posso gastar hoje e previsão de saldo para 90 dias",
+        "Lançamento rápido em linguagem natural, sem IA e sem enviar nada",
+        "Importação de extrato OFX/CSV que aprende as categorias",
+        "Código aberto, com cerca de 280 testes automatizados"
+      ],
+      "recursos_en": [
+        "Credit cards the Brazilian way: closing day, due day and installments on the right invoice",
+        "Safe-to-spend today and a 90-day balance forecast",
+        "Quick entry in plain language, with no AI and nothing sent anywhere",
+        "OFX/CSV statement import that learns your categories",
+        "Open source, with about 280 automated tests"
+      ],
+      "videos": [],
+      "capa": "/assets/uploads/fluxo-capa.jpg",
+      "link": "https://fluxo.lucianopereiradejesus14.workers.dev",
+      "codigo": "https://github.com/lucianopereiradev/Fluxo"
+    },
+    {
       "titulo": "RemindMail",
       "titulo_en": "",
       "categoria": "projeto",
